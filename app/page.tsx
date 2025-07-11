@@ -3,13 +3,10 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { Badge } from "@/components/ui/badge"
-import { Separator } from "@/components/ui/separator"
 import { ThemeToggle } from "@/components/theme-toggle"
-import { Brain, Lightbulb, Send, Loader2, Shuffle, AlertTriangle, Palette } from "lucide-react"
+import { Brain, Send, Loader2, Shuffle, AlertTriangle, Palette } from "lucide-react"
 import Link from "next/link"
 import ReactMarkdown from "react-markdown"
 
@@ -88,6 +85,7 @@ export default function Home() {
       const data = await response.json()
       setAdvice(data.choices[0].message.content)
     } catch (error) {
+      console.error("Error fetching advice:", error)
       setAdvice("I apologize, but our advanced consultation systems are temporarily experiencing a recalibration phase. This is actually excellent news, as it demonstrates our commitment to cutting-edge advisory methodologies. Please try again momentarily.")
     }
     setIsLoading(false)
