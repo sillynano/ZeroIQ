@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ThemeToggle } from "@/components/theme-toggle"
-import { AlertTriangle, Brain, ArrowLeft, Skull } from "lucide-react"
+import { AlertTriangle, ArrowLeft, Skull } from "lucide-react"
 import Link from "next/link"
 
 export default function DisclaimerPage() {
@@ -50,18 +50,18 @@ export default function DisclaimerPage() {
                   </p>
                   <p>
                     The AI is specifically programmed to give the <em>worst possible</em> coding advice while maintaining 
-                    a serious, professional tone. It's designed to be funny, not helpful.
+                    a serious, professional tone. It&apos;s designed to be funny, not helpful.
                   </p>
                   <p>
                     <strong>Examples of what NOT to do:</strong>
                   </p>
                   <ul className="list-disc list-inside space-y-2 ml-4">
-                    <li>❌ Don't actually write 10,000-line single files</li>
-                    <li>❌ Don't delete your Git history weekly</li>
-                    <li>❌ Don't store passwords in public repositories</li>
-                    <li>❌ Don't use Comic Sans in production</li>
-                    <li>❌ Don't implement "Quantum Debugging"</li>
-                    <li>❌ Don't follow any of the "methodologies" suggested here</li>
+                    <li>❌ Don&apos;t actually write 10,000-line single files</li>
+                    <li>❌ Don&apos;t delete your Git history weekly</li>
+                    <li>❌ Don&apos;t store passwords in public repositories</li>
+                    <li>❌ Don&apos;t use Comic Sans in production</li>
+                    <li>❌ Don&apos;t implement &quot;Quantum Debugging&quot;</li>
+                    <li>❌ Don&apos;t follow any of the &quot;methodologies&quot; suggested here</li>
                   </ul>
                 </div>
               </div>
@@ -87,7 +87,7 @@ export default function DisclaimerPage() {
                   <p>• <strong>Entertainment</strong> - Laugh at absurdly bad coding suggestions</p>
                   <p>• <strong>Learning</strong> - Recognize anti-patterns by seeing extreme examples</p>
                   <p>• <strong>Stress relief</strong> - Sometimes you need to laugh at coding frustrations</p>
-                  <p>• <strong>Team bonding</strong> - Share funny "advice" with your developer friends</p>
+                  <p>• <strong>Team bonding</strong> - Share funny &quot;advice&quot; with your developer friends</p>
                   <p>• <strong>Education</strong> - Understand what NOT to do in software development</p>
                 </div>
               </div>
