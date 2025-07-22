@@ -1,39 +1,99 @@
-# ZeroIQ
-a project where you get no helpful information
+# 🧠 ZeroIQ
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+> A project where you get no helpful information... but with style! 🎨
 
-## Getting Started
+A modern Next.js application built with cutting-edge technologies and a beautiful UI component library. Despite its name, ZeroIQ is packed with intelligent design patterns and best practices.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- 🚀 **Next.js 15** with App Router and Turbopack
+- ⚛️ **React 19** with latest features
+- 🎨 **Tailwind CSS 4** for modern styling
+- 🌙 **Dark/Light Mode** with next-themes
+- 📱 **Responsive Design** with mobile-first approach
+- 🧩 **Radix UI Components** for accessibility
+- 🎭 **Beautiful UI** with shadcn/ui components
+- 📊 **Charts & Data Visualization** with Recharts
+- 🔧 **TypeScript** for type safety
+- 🎪 **Rich Component Library** with 30+ components
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Core
+- **Framework**: Next.js 15.3.5
+- **Runtime**: React 19
+- **Language**: TypeScript 5
+- **Styling**: Tailwind CSS 4
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### UI Components
+- **Base**: Radix UI primitives
+- **Icons**: Lucide React
+- **Animations**: Tailwind Animate CSS
+- **Charts**: Recharts
+- **Forms**: React Hook Form + Zod validation
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## 🧩 UI Components
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project includes a comprehensive set of UI components:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Layout & Navigation**
+- Sidebar, Navigation Menu, Breadcrumb, Pagination
 
-## Deploy on Vercel
+**Form Controls**
+- Input, Textarea, Select, Checkbox, Radio Group, Switch, Slider
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Data Display**
+- Table, Card, Badge, Avatar, Progress, Charts
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Feedback**
+- Alert, Dialog, Sheet, Popover, Tooltip, Sonner (toast)
+
+**Interactive**
+- Button, Dropdown Menu, Context Menu, Command Palette
+
+## 🎨 Theming
+
+The app supports both light and dark themes with seamless switching:
+
+- Theme persistence across sessions
+- System preference detection
+- Custom theme toggle component
+- Tailwind CSS dark mode support
+
+## 🔧 VS Code Integration
+
+Pre-configured VS Code settings for optimal development:
+
+- **Debug Configurations**: Multiple launch configs for debugging
+- **Tasks**: Quick commands for common operations
+- **Extensions**: Recommended extensions for best experience
+
+### Debug Options
+- Start Development Server
+- Debug Server-side Code
+- Debug Client-side Code
+- Full Stack Debugging
+
+## 📱 Responsive Design
+
+Built with mobile-first approach:
+- Responsive breakpoints
+- Touch-friendly interactions
+- Optimized for all screen sizes
+- Progressive enhancement
+
+## 📚 Learn More
+
+### Next.js Resources
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Learn Next.js](https://nextjs.org/learn)
+- [Next.js GitHub](https://github.com/vercel/next.js)
+
+### UI Components
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Radix UI](https://www.radix-ui.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+
+
+**Remember**: Despite the name "ZeroIQ", this project is built with maximum intelligence and best practices! 🧠✨
