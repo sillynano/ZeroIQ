@@ -3,12 +3,14 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { ColorThemeToggle } from "@/components/color-theme-toggle"
+import { PageWrapper } from "@/components/page-wrapper"
 import { AlertTriangle, ArrowLeft, Skull } from "lucide-react"
 import Link from "next/link"
 
 export default function DisclaimerPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-950 dark:to-orange-950">
+    <PageWrapper>
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="flex justify-between items-center mb-8">
@@ -21,7 +23,10 @@ export default function DisclaimerPage() {
               <p className="text-red-600 dark:text-red-400">⚠️ WARNING: This Website Gives Terrible Advice</p>
             </div>
           </div>
-          <ThemeToggle />
+          <div className="flex items-center space-x-2">
+            <ColorThemeToggle />
+            <ThemeToggle />
+          </div>
         </div>
 
         {/* Main Disclaimer */}
@@ -117,6 +122,6 @@ export default function DisclaimerPage() {
           </Card>
         </div>
       </div>
-    </div>
+    </PageWrapper>
   )
 }

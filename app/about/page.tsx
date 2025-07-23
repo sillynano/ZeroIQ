@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { ColorThemeToggle } from "@/components/color-theme-toggle"
+import { PageWrapper } from "@/components/page-wrapper"
 import { 
   ArrowLeft, 
   User, 
@@ -11,6 +13,7 @@ import {
   Github,
   MapPin,
   Calendar,
+  Slack,
   Heart
 } from "lucide-react"
 import Link from "next/link"
@@ -22,6 +25,7 @@ export default function AboutPage() {
     title: "lowkey smart monkey",
     location: "Houston, USA",
     github: "sillynano",
+    slack: "T0266FRGM/D090QKWHARJ", // Slack username or workspace link
     bio: "A monkey learning how to code stuff.",
     yearsOfExperience: "1+"
   }
@@ -39,7 +43,7 @@ export default function AboutPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900">
+    <PageWrapper>
       {/* Header */}
       <header className="border-b bg-background/80 backdrop-blur-sm">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,7 +60,10 @@ export default function AboutPage() {
                 <h1 className="text-xl font-bold">About Me</h1>
               </div>
             </div>
-            <ThemeToggle />
+            <div className="flex items-center space-x-2">
+              <ColorThemeToggle />
+              <ThemeToggle />
+            </div>
           </div>
         </div>
       </header>
@@ -104,6 +111,12 @@ export default function AboutPage() {
               <a href={`https://github.com/${personalInfo.github}`} target="_blank" rel="noopener noreferrer">
                 <Github className="h-4 w-4 mr-2" />
                 GitHub
+              </a>
+            </Button>
+            <Button variant="outline" size="sm" asChild>
+              <a href={`https://app.slack.com/client/${personalInfo.slack}`} target="_blank" rel="noopener noreferrer">
+                <Slack className="h-4 w-4 mr-2" />
+                Slack
               </a>
             </Button>
           </div>
@@ -189,6 +202,12 @@ export default function AboutPage() {
                 </a>
               </Button>
               <Button variant="outline" asChild>
+                <a href={`https://app.slack.com/${personalInfo.slack}`} target="_blank" rel="noopener noreferrer">
+                  <Slack className="h-4 w-4 mr-2" />
+                  Slack
+                </a>
+              </Button>
+              <Button variant="outline" asChild>
                 <Link href="/">
                   <ArrowLeft className="h-4 w-4 mr-2" />
                   Back to ZeroIQ
@@ -198,6 +217,6 @@ export default function AboutPage() {
           </CardContent>
         </Card>
       </div>
-    </div>
+    </PageWrapper>
   )
 }

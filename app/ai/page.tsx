@@ -6,6 +6,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { ColorThemeToggle } from "@/components/color-theme-toggle"
+import { PageWrapper } from "@/components/page-wrapper"
 import { Brain, Send, Loader2, Shuffle, AlertTriangle, ArrowLeft } from "lucide-react"
 import Link from "next/link"
 import ReactMarkdown from "react-markdown"
@@ -70,7 +72,7 @@ export default function AiPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900">
+    <PageWrapper>
       {/* Header */}
       <header className="border-b bg-background/80 backdrop-blur-sm">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -87,7 +89,10 @@ export default function AiPage() {
                 <h1 className="text-2xl font-bold">ZeroIQ AI</h1>
               </div>
             </div>
-            <ThemeToggle />
+            <div className="flex items-center space-x-2">
+              <ColorThemeToggle />
+              <ThemeToggle />
+            </div>
           </div>
         </div>
       </header>
@@ -213,6 +218,6 @@ export default function AiPage() {
           </Link>
         </div>
       </div>
-    </div>
+    </PageWrapper>
   )
 }
