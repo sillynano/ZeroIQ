@@ -33,7 +33,7 @@ export default function AboutPage() {
 
   const interests = [
     "🖥 Technology",
-    "🎮 Game Development", 
+    "🎮 Gaming", 
     "📚 Learning To Code",
     "🎵 Music"
   ]
@@ -65,8 +65,23 @@ export default function AboutPage() {
         {/* Hero Section */}
         <div className="text-center mb-12">
           <div className="mb-6">
-            <div className="w-32 h-32 bg-slate-200 dark:bg-slate-700 rounded-full mx-auto mb-6 border-4 border-white dark:border-slate-800 shadow-lg flex items-center justify-center">
-              <User className="h-16 w-16 text-slate-500 dark:text-slate-400" />
+            <div className="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-white dark:border-slate-800 shadow-lg overflow-hidden bg-slate-200 dark:bg-slate-700">
+              <img 
+                src="/profile.png" 
+                alt={`${personalInfo.name} profile photo`}
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  // Fallback to icon if image fails to load
+                  e.currentTarget.style.display = 'none';
+                  const fallback = e.currentTarget.nextElementSibling as HTMLElement;
+                  if (fallback) {
+                    fallback.style.display = 'flex';
+                  }
+                }}
+              />
+              <div className="w-full h-full flex items-center justify-center" style={{display: 'none'}}>
+                <User className="h-16 w-16 text-slate-500 dark:text-slate-400" />
+              </div>
             </div>
             <h1 className="text-4xl font-bold text-slate-900 dark:text-slate-100 mb-2">
               {personalInfo.name}

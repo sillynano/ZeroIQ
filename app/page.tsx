@@ -117,7 +117,7 @@ export default function Home() {
               </div>
               <CardTitle>Beautiful Design</CardTitle>
               <CardDescription>
-                Modern UI components that look amazing while doing nothing
+                Modern UI components that look amazing
               </CardDescription>
             </CardHeader>
             <CardContent>
