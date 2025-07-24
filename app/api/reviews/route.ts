@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import dbConnect from '@/lib/mongodb'
-import Review, { IReview } from '@/lib/models/Review'
+import Review from '@/lib/models/Review'
 
 export async function GET() {
   try {
@@ -15,7 +15,7 @@ export async function GET() {
       success: true, 
       reviews: reviews.map(review => ({
         ...review,
-        _id: (review._id as any).toString()
+        _id: String(review._id)
       }))
     })
   } catch (error) {

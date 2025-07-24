@@ -49,8 +49,8 @@ export default function Home() {
           </h1>
           
           <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-400 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-4">
-            A project where you get "helpful information" with style! 
-            Experience the beauty of modern web development with "intelligence".
+            A project where you get &quot;helpful information&quot; with style! 
+            Experience the beauty of modern web development with &quot;intelligence&quot;.
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mb-8 sm:mb-12 px-4">
@@ -77,12 +77,12 @@ export default function Home() {
               </div>
               <CardTitle className="text-lg sm:text-xl">Zero Intelligence</CardTitle>
               <CardDescription className="text-sm sm:text-base">
-                Proudly offering "helpful information" since day one
+                Proudly offering &quot;helpful information&quot; since day one
               </CardDescription>
             </CardHeader>
             <CardContent className="pt-0">
               <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed">
-                Experience the pure joy of getting exactly what you don't need, 
+                Experience the pure joy of getting exactly what you don&apos;t need, 
                 delivered with maximum style and minimum usefulness.
               </p>
             </CardContent>

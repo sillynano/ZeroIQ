@@ -24,8 +24,7 @@ import {
   Trash2,
   PlusCircle,
   Send,
-  User,
-  AlertCircle
+  User
 } from "lucide-react"
 import Link from "next/link"
 
@@ -45,6 +44,7 @@ export default function RatingsPage() {
       try {
         await removeReview(reviewId)
       } catch (error) {
+        console.error('Failed to remove review:', error)
         alert('Failed to remove review. Please try again.')
       }
     }
@@ -70,6 +70,7 @@ export default function RatingsPage() {
       setNewReviewerName("")
       setShowWriteReview(false)
     } catch (error) {
+      console.error('Failed to submit review:', error)
       alert('Failed to submit review. Please try again.')
     } finally {
       setIsSubmitting(false)
@@ -81,8 +82,8 @@ export default function RatingsPage() {
   const averageRating = stats?.averageRating || 0
   const ratingDistribution = stats?.ratingDistribution || { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 }
 
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString)
+  const formatDate = (dateString: string | Date) => {
+    const date = typeof dateString === 'string' ? new Date(dateString) : dateString
     return new Intl.DateTimeFormat('en-US', {
       year: 'numeric',
       month: 'short',
@@ -227,7 +228,7 @@ export default function RatingsPage() {
                   Write a Review
                 </CardTitle>
                 <CardDescription>
-                  Share your experience with ZeroIQ's advice
+                  Share your experience with ZeroIQ&apos;s advice
                 </CardDescription>
               </div>
               {!showWriteReview && (
@@ -346,7 +347,7 @@ export default function RatingsPage() {
                         <div className="flex items-center space-x-4 text-sm text-slate-500 dark:text-slate-400">
                           <div className="flex items-center space-x-1">
                             <Calendar className="h-3 w-3" />
-                            <span>{formatDate(review.createdAt)}</span>
+                            <span>{formatDate(review.createdAt || new Date())}</span>
                           </div>
                           <div className="flex items-center space-x-1">
                             <User className="h-3 w-3" />

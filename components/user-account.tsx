@@ -20,7 +20,7 @@ import {
 } from "@/components/ui/dialog"
 import { Badge } from "@/components/ui/badge"
 import { useAuth } from "@/components/auth-provider"
-import { User, Lock, LogOut, UserCheck } from "lucide-react"
+import { User, Lock, LogOut } from "lucide-react"
 
 export function UserAccount() {
   const { currentUser, login, logout } = useAuth()

@@ -32,7 +32,7 @@ export default function Error({
         
         <p className="text-lg text-muted-foreground mb-8">
           The AI must have given us some terrible advice again. 
-          Don't worry though - we can try to recover from this mess.
+          Don&apos;t worry though - we can try to recover from this mess.
         </p>
         
         <div className="space-y-4">

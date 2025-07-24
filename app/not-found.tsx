@@ -43,8 +43,8 @@ export default function NotFound() {
               Page Not Found
             </h2>
             <p className="text-lg text-slate-600 dark:text-slate-400 mb-8">
-              Oops! The page you're looking for seems to have vanished into the digital void. 
-                Don't worry, it happens to the best of us.  
+              Oops! The page you&apos;re looking for seems to have vanished into the digital void. 
+                Don&apos;t worry, it happens to the best of us.  
             </p>
           </div>
 
@@ -94,7 +94,7 @@ export default function NotFound() {
             <CardContent className="pt-6">
               <div className="bg-yellow-50 dark:bg-yellow-950 p-4 rounded-lg">
                 <p className="text-yellow-800 dark:text-yellow-200 font-medium">
-                  💡 <strong>Pro Tip:</strong>Try out our ZeroIQ AI for some "helpful" advice! At least it will be funnier than this 404 page!
+                  💡 <strong>Pro Tip:</strong>Try out our ZeroIQ AI for some &quot;helpful&quot; advice! At least it will be funnier than this 404 page!
                 </p>
               </div>
             </CardContent>

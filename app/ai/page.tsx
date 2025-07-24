@@ -119,8 +119,8 @@ export default function AiPage() {
             AI Consultant
           </h1>
           <p className="text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-2xl mx-auto">
-            Get expert advice that's guaranteed to make your projects more interesting! 
-            Our AI provides absolutely "helpful information" with maximum confidence.
+            Get expert advice that&apos;s guaranteed to make your projects more interesting! 
+            Our AI provides absolutely &quot;helpful information&quot; with maximum confidence.
           </p>
         </div>
 
@@ -134,7 +134,7 @@ export default function AiPage() {
                 Ask Our AI Consultant
               </CardTitle>
               <CardDescription>
-                Describe your technical challenge and receive our signature "helpful guidance"
+                Describe your technical challenge and receive our signature &quot;helpful guidance&quot;
               </CardDescription>
             </CardHeader>
             <CardContent>
