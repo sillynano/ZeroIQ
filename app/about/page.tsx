@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { ColorThemeToggle } from "@/components/color-theme-toggle"
 import { PageWrapper } from "@/components/page-wrapper"
+import { UserAccount } from "@/components/user-account"
 import { 
   ArrowLeft, 
   User, 
@@ -61,6 +62,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="flex items-center space-x-2">
+              <UserAccount />
               <ColorThemeToggle />
               <ThemeToggle />
             </div>

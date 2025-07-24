@@ -3,8 +3,9 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ThemeToggle } from "@/components/theme-toggle"
-import { ColorThemeToggle } from "@/components/color-theme-toggle"
+  import { ColorThemeToggle } from "@/components/color-theme-toggle"
 import { PageWrapper } from "@/components/page-wrapper"
+import { UserAccount } from "@/components/user-account"
 import { AlertTriangle, ArrowLeft, Skull } from "lucide-react"
 import Link from "next/link"
 
@@ -24,6 +25,7 @@ export default function DisclaimerPage() {
             </div>
           </div>
           <div className="flex items-center space-x-2">
+            <UserAccount />
             <ColorThemeToggle />
             <ThemeToggle />
           </div>

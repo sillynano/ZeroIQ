@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { ColorThemeToggle } from "@/components/color-theme-toggle"
 import { PageWrapper } from "@/components/page-wrapper"
+import { UserAccount } from "@/components/user-account"
 import { Brain, Sparkles, Zap } from "lucide-react"
 import Link from "next/link"
 
@@ -24,6 +25,7 @@ export default function Home() {
               <Badge variant="secondary" className="hidden sm:flex text-xs font-medium">
                 lowkey the best unpaid intern that genertaes ideas
               </Badge>
+              <UserAccount />
               <ColorThemeToggle />
               <ThemeToggle />
             </div>
@@ -118,6 +120,9 @@ export default function Home() {
             </Link>
             <Link href="/ai" className="text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100 transition-colors">
               AI Consultant
+            </Link>
+            <Link href="/ratings" className="text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100 transition-colors">
+              Ratings & Reviews
             </Link>
           </div>
           <p className="text-slate-500 dark:text-slate-500">

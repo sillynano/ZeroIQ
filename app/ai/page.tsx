@@ -8,6 +8,9 @@ import { Textarea } from "@/components/ui/textarea"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { ColorThemeToggle } from "@/components/color-theme-toggle"
 import { PageWrapper } from "@/components/page-wrapper"
+import { StarRating } from "@/components/star-rating"
+import { useRatings } from "@/components/ratings-provider"
+import { UserAccount } from "@/components/user-account"
 import { Brain, Send, Loader2, Shuffle, AlertTriangle, ArrowLeft } from "lucide-react"
 import Link from "next/link"
 import ReactMarkdown from "react-markdown"
@@ -16,6 +19,17 @@ export default function AiPage() {
   const [question, setQuestion] = useState("")
   const [advice, setAdvice] = useState("")
   const [isLoading, setIsLoading] = useState(false)
+  const { addRating, getRatingForAdvice } = useRatings()
+
+  const handleRating = (rating: number) => {
+    if (advice && question) {
+      addRating({
+        question,
+        advice,
+        rating
+      })
+    }
+  }
 
   const terribleCodingIdeas = [
     "I recommend implementing a revolutionary 'Quantum Debugging' methodology where you write code without testing it locally, then deploy directly to production. The uncertainty principle of quantum mechanics ensures that bugs only exist when observed, so production users will naturally collapse the wave function into working code.",
@@ -86,10 +100,11 @@ export default function AiPage() {
               </Link>
               <div className="flex items-center space-x-2">
                 <Brain className="h-8 w-8 text-primary" />
-                <h1 className="text-2xl font-bold">ZeroIQ AI</h1>
+                <h1 className="text-2xl font-bold">ZeroIQ</h1>
               </div>
             </div>
             <div className="flex items-center space-x-2">
+              <UserAccount />
               <ColorThemeToggle />
               <ThemeToggle />
             </div>
@@ -107,13 +122,6 @@ export default function AiPage() {
             Get expert advice that's guaranteed to make your projects more interesting! 
             Our AI provides absolutely "helpful information" with maximum confidence.
           </p>
-          
-          <div className="flex justify-center space-x-4 mb-8">
-            <Button onClick={getRandomAdvice} className="bg-primary hover:bg-primary/90">
-              <Shuffle className="h-4 w-4 mr-2" />
-              Get Random Terrible Advice
-            </Button>
-          </div>
         </div>
 
         {/* Main Content */}
@@ -141,23 +149,35 @@ export default function AiPage() {
                     className="min-h-[100px]"
                   />
                 </div>
-                <Button 
-                  type="submit" 
-                  disabled={!question.trim() || isLoading}
-                  className="w-full"
-                >
-                  {isLoading ? (
-                    <>
-                      <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-                      Consulting our experts...
-                    </>
-                  ) : (
-                    <>
-                      <Send className="h-4 w-4 mr-2" />
-                      Get Professional Advice
-                    </>
-                  )}
-                </Button>
+                <div className="flex space-x-3">
+                  <Button 
+                    type="submit" 
+                    disabled={!question.trim() || isLoading}
+                    className="flex-1"
+                  >
+                    {isLoading ? (
+                      <>
+                        <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                        Consulting our experts...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="h-4 w-4 mr-2" />
+                        Get Professional Advice
+                      </>
+                    )}
+                  </Button>
+                  <Button 
+                    type="button"
+                    onClick={getRandomAdvice} 
+                    variant="outline"
+                    disabled={isLoading}
+                    className="flex-shrink-0"
+                  >
+                    <Shuffle className="h-4 w-4 mr-2" />
+                    Random Advice
+                  </Button>
+                </div>
               </form>
             </CardContent>
           </Card>
@@ -197,6 +217,19 @@ export default function AiPage() {
                     >
                       {advice}
                     </ReactMarkdown>
+                  </div>
+                </div>
+                
+                {/* Star Rating */}
+                <div className="flex justify-end mt-4 pt-4 border-t border-slate-200 dark:border-slate-700">
+                  <div className="flex items-center space-x-3">
+                    <span className="text-sm text-slate-600 dark:text-slate-400 font-medium">
+                      Rate this terrible advice:
+                    </span>
+                    <StarRating 
+                      onRate={handleRating}
+                      initialRating={getRatingForAdvice(advice) || 0}
+                    />
                   </div>
                 </div>
               </CardContent>
